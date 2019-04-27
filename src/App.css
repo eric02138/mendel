@@ -1,33 +1,121 @@
-.App {
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 58px;
+  color: #585858;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.game-area {
+  background-color: #C6C6C6;
+  padding-bottom: 20%;
+}
+
+.display-area {
+  background-color: #D3D3D3;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+h1, h4 {
+  display: inline;
+}
+
+.button-square {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #C6C6C6;
+  opacity: 50%;
+  font-size: 29px;
+  width: 100px;
+  height: 113px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+  border-width: 4px;
+  border-radius: 10px;
+}
+
+.button-square-selected {
+  border-color: #E07567;
+  background-color: rgba(255, 255, 255, 1.0);
+  opacity: 50%;
+  font-size: 29px;
+  width: 100px;
+  height: 113px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+  border-width: 4px;
+  border-radius: 10px;
+}
+
+.button-square:hover {
+  border-color: #E07567;
+}
+
+.button-pea {
+    height: 50%;
+    width: 50%;
+}
+
+.pea-square {
+  background: #fff;
+  border: 3px solid #C6C6C6;
+  width: 204px;
+  height: 204px;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.grid-label-empty {
+    width: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.vert-column {
+  padding-top: 18%;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-label-h {
+    width: 204px;
+    align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-label-v {
+    width: 104px;
+    height: 204px;
+}
+
+.grid-label-v p {
+    //vertical-align: bottom;
+    position: relative;
+    top: 30%;
+}
+
+.top-left {
+  border-radius: 10px 0 0 0;
+}
+
+.top-right {
+  border-radius: 0 10px 0 0;
+}
+
+.bottom-right {
+  border-radius: 0 0 10px 0;
+}
+
+.bottom-left {
+  border-radius: 0 0 0 10px;
+}
+
+.game-row:after {
+  clear: both;
+}
+
+.pea {
 }
