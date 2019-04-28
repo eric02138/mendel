@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mendel's Punnett Square
 
-## Available Scripts
+## Design Considerations
+Since someone went to the trouble of creating a [template](https://xd.adobe.com/spec/72ec9d6e-332d-4c4a-6e51-635e283255ee-04dd/), I wanted to try to match it as closely as possible.  
 
-In the project directory, you can run:
+Making the app responsive for various screen resolutions suggested the use of [bootstrap](https://getbootstrap.com/) for layout.
+
+## Development Considerations
+
+The spec stated that the various output displays (the grid, the graph and the genotypic ratio) needed to all respond to the same user inputs.  This requirement suggests some sort of state management.  While I considered using [Vuex](https://vuex.vuejs.org/) (which is awesome, especially for large projects), this app was simple enough that [React](https://reactjs.org/)'s state management would do the job.  
+
+Finally, I used [canvasJS](https://canvasjs.com/) to build the chart, since the documentation had examples of react integration.
+
+## Future Improvements
+
+It's perfect!  Har har.  I kid.
+
+One thing that bothered me was the orientation of the buttons when I made the screen narrow (basic mobile device testing).  At first I considered a script that would dynamically change the direction of the vertically arranged buttons depending on the screen width.  I later realized that on a small device (e.g. a phone), pressing small buttons would be just as annoying.  A better solution would be to convert the buttons into html drop-down menus when the screen is a certain size - most phones have a way of making html form elements more user friendly.  Alas, there wasn't time.
+
+## Installation
+
+To run this app, you will need to install [Node](https://nodejs.org/en/).
+
+
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
