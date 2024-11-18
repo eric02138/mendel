@@ -22,6 +22,10 @@ One thing that bothered me was the orientation of the buttons when I made the sc
 To run this app, you will need to install [Node](https://nodejs.org/en/).
 
 ###`npm start`
+You may get an SSL error from running an old version of Node.  You can solve this quickly by setting an environment variable thusly:
+###`export NODE_OPTIONS=--openssl-legacy-provider`
+and then running
+###`npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
